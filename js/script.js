@@ -3,7 +3,8 @@ const { createApp } = Vue;
 const app = createApp({
     name: 'Carousel',
     data: () => ({
-       pictures
+       pictures,
+       currentIndex: 0
     })
 
 })
