@@ -52,7 +52,7 @@
 
     <!-- Thumbnails -->
     <div id="thumbnails">
-      <img v-for="pic in pictures" src="img/01.jpg" alt="Svezia">
+      <img v-for="pic in pictures" :src="`img/${pic.image}`" :alt="pic.name">
     </div>
 
     <!-- <div class="autoplay-controls">

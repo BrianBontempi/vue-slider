@@ -2,12 +2,10 @@ const { createApp } = Vue;
 
 const app = createApp({
     name: 'Carousel',
-    Data() {
-        return{
-            // Array preso da data.js
-            pictures,
-        }
-    },
+    data: () => ({
+       pictures
+    })
+
 })
 
 app.mount('#root');
