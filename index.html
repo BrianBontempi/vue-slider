@@ -30,7 +30,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="container" id="root">
     <div id="carousel">
       <!-- Prev button -->
       <i id="prev-button" class="bi bi-arrow-left-circle-fill" role="button"></i>
@@ -52,7 +52,7 @@
 
     <!-- Thumbnails -->
     <div id="thumbnails">
-      <img src="img/01.jpg" alt="Svezia" class="active">
+      <img v-for="pic in pictures" src="img/01.jpg" alt="Svezia">
     </div>
 
     <!-- <div class="autoplay-controls">
