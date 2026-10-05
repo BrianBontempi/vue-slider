@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Vue Slider</title>
 
   <link rel="icon" href="favicon.ico" type="image/ico" />
 
@@ -31,7 +31,7 @@
 <body>
 
   <div class="container" id="root">
-    <div id="carousel">
+    <div id="carousel" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
       <!-- Prev button -->
       <i v-if="currentIndex" id="prev-button" class="bi bi-arrow-left-circle-fill" role="button" @click="currentIndex--"></i>
 
@@ -52,7 +52,7 @@
 
     <!-- Thumbnails -->
     <div id="thumbnails">
-      <img v-for="(pic, i) in pictures" :src="`img/${pic.image}`" :alt="pic.name" :class="{active: i === currentIndex}">
+      <img v-for="(pic, i) in pictures" :src="`img/${pic.image}`" :alt="pic.name" :class="{active: i === currentIndex}" @click="setCurrentIndex(i)">
     </div>
 
     <!-- <div class="autoplay-controls">
